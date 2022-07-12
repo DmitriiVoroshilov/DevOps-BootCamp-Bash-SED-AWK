@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
 # Create copy of passwd file to passwd_new.
-cp passwd passwd_new
+# cp passwd passwd_new
+cat passwd > passwd_new
 
 # Change shell for user saned
 awk -i inplace '/saned/ {gsub("/usr/sbin/nologin", "/bin/bash")}1' passwd_new
